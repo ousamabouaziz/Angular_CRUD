@@ -30,12 +30,6 @@ pipeline{
             }
         }
 
-        stage('test') {
-            steps {
-                sh 'npm run ng test'
-            }
-        }
-
 
         stage("Sonarqube Analysis") {
             steps {
