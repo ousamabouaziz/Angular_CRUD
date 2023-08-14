@@ -22,15 +22,15 @@ pipeline{
             }
         }
 
-        stage('Build') {
+        stage('test') {
             steps {
-                sh 'ng build --prod'
+                sh 'npm test'
             }
         }
 
-        stage('Run Tests') {
+        stage('Run build') {
             steps {
-                sh 'ng test'
+                sh 'ng build'
             }
         }
 
