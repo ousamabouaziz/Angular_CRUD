@@ -1,4 +1,6 @@
 pipeline{
+
+  
     agent any
     
     
@@ -22,20 +24,17 @@ pipeline{
             }
         }
 
-        stage('test') {
-            steps {
-                sh 'ng test'
-            }
-        }
-
-        stage('Run build') {
+       stage('build') {
             steps {
                 sh 'ng build'
             }
         }
 
-        
-        
+        stage('test') {
+            steps {
+                sh 'ng test'
+            }
+        }
 
 
         stage("Sonarqube Analysis") {
