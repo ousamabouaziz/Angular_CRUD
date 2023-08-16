@@ -46,7 +46,7 @@ pipeline{
                     def artifactFolder = "dist/*-${artifactVersion}"
                     
                     // Deploy artifact files to Nexus3 repository
-                    withCredentials((credentialsId: 'nexus') {
+                    withCredentials(credentialsId: 'nexus') {
                         sh "curl --upload-file ${artifactFolder}/* ${NEXUS_URL}"
                     }
                 }
