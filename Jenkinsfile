@@ -34,7 +34,7 @@ pipeline{
 
        stage('build') {
             steps {
-                sh 'npm run ng build'
+                sh 'npm run build'
             }
         }
 
@@ -42,7 +42,7 @@ pipeline{
        stage('Deploy to Nexus3') {
             steps {
                 script {
-                    def artifactVersion = '0.0.0' 
+                    def artifactVersion = '1.0.0' 
                     def artifactFolder = "dist/*-${artifactVersion}"
                     
                     // Deploy artifact files to Nexus3 repository
