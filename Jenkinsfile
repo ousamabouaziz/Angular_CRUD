@@ -35,7 +35,7 @@ pipeline{
             steps {
                 script {
                     withSonarQubeEnv(credentialsId: 'sonarqube') {
-                      sh "${SonarScanner}/bin/sonar-scanner"
+                      sh "sonar-scanner"
                         
                     }
                 }
