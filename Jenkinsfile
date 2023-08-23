@@ -39,19 +39,19 @@ pipeline{
         }
 
 
-       stage('Deploy to Nexus3') {
-            steps {
-                script {
-                    def artifactVersion = '1.0.0' 
-                    def artifactFolder = "dist/*-${artifactVersion}"
+       //stage('Deploy to Nexus3') {
+            //steps {
+                //script {
+                    //def artifactVersion = '1.0.0' 
+                    //def artifactFolder = "dist/*-${artifactVersion}"
                     
                     // Deploy artifact files to Nexus3 repository
-                    withCredentials(credentialsId: 'nexus') {
-                        sh "curl --upload-file ${artifactFolder}/* ${NEXUS_URL}"
-                    }
-                }
-            }
-        }
+                    //withCredentials(credentialsId: 'nexus') {
+                        //sh "curl --upload-file ${artifactFolder}/* ${NEXUS_URL}"
+                    //}
+                //}
+            //}
+        //}
 
 
 
