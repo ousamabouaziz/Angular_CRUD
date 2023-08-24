@@ -26,4 +26,4 @@ COPY --from=build /app/dist/ /usr/share/nginx/html
 EXPOSE 4200
 
 # Start Nginx when the container runs
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx"]
